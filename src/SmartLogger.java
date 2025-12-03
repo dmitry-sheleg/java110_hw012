@@ -6,6 +6,6 @@ public class SmartLogger implements Logger {
     @Override
     public void log(String msg) {
         System.out.println((msg.matches("(?i).*" + "error" + ".*") ? "ERROR#" : "INFO#")
-                + msgID++ + LocalDateTime.now() + ": " + msg);
+                + msgID++ + " [" + LocalDateTime.now() + "] " + msg);
     }
 }
